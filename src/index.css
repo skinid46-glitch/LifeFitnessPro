@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-Work: 'Work Sans', sans-serif;
+  --font-nudge: "VC Nudge Trial Regular", sans-serif;
+
+  --animate-infinite-scroll: infinite-scroll 5s linear infinite;
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50% - 20px));
+    }
+  }
+}
+
+@font-face {
+  font-family: 'VC Nudge Trial Regular';
+  src: url('./assets/vc-nudge-trial-cufonfonts-webfont/VCNudgeBlackTrial.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
